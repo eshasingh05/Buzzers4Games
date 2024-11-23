@@ -1,18 +1,9 @@
 const gameCodeInput = document.getElementById("game-code");
 const playerNameInput = document.getElementById("player-name");
-const joinGameBtn = document.getElementById("join-game");
 const startGameBtn = document.getElementById("start-game");
-const loginScreen = document.getElementById("login-screen");
-const gameScreen = document.getElementById("game-screen");
-const playerArea = document.getElementById("player-area");
-const hostArea = document.getElementById("host-area");
-const soundSelect = document.getElementById("sound-select");
-const saveSoundBtn = document.getElementById("save-sound");
-const playSoundBtn = document.getElementById("play-sound");
-const randomSoundBtn = document.getElementById("random-sound");
-const scoreTable = document.querySelector("#score-table tbody");
 
-const gameCodesList = [];
+const gameCodesList = [
+];
 
 
 startGameBtn.addEventListener("click", () => {
@@ -26,8 +17,9 @@ startGameBtn.addEventListener("click", () => {
     alert("Please enter a name!");
     return;
   } else {
-    gameCodesList.push(gameCode);
-    window.location.href = "https://eshasingh05.github.io/theButtonGame/game.html"; 
-  }
+    gameCodesList.push({code: gameCodeInput, players: [playernameInput]})
+    export const gameCodesList;
+    window.location.href = "https://eshasingh05.github.io/Buzzers4Games/chooseSound/chooseSound.html"; 
 
+  }
 });
